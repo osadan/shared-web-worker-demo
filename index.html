@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src='./simplex-api.js'></script>
+        <script src='./simplex.js'></script>
+        <script src='./client.js'></script>
+    </head>
+    <body>
+        <input id='message-text' type='text'/>
+        <div class='message'>message</div>
+        <button id='click'>click</button>
+        <script>
+           const client = new Client();
+           const simplexApi = new SimplexApi();
+           const simplex = new Simplex();
+           simplex.init();
+           simplexApi.init();
+           client.init(simplexApi);
+           client.send('hello',[1,2,3]); 
+        </script>
+    </body>
+</html>
